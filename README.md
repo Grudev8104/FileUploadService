@@ -94,7 +94,6 @@ Required Header:
 
 Error Handling
 General Error Handling:
-
 •	Each microservice includes try-catch blocks to handle errors related to:
 o	Invalid input data.
 o	File processing errors.
@@ -102,6 +101,7 @@ o	Communication errors between microservices.
 o	Database access errors.
 
 Possible Errors:
+
 •	400 Bad Request: Invalid input data or missing file.
 •	500 Internal Server Error: Unexpected errors during processing or communication.
 
@@ -109,12 +109,13 @@ Testing
 
 Overview
 This section provides details on the testing strategy implemented for the XML to JSON Processing System. The tests ensure that both microservices, FileUploadServiceAPI and ProcessedFilesServiceAPI, work correctly, individually and together, to handle XML file uploads, conversion to JSON, and storage operations efficiently.
-Purpose
+
 Unit tests have been implemented to validate the correctness of individual components within each microservice. These tests focus on ensuring that methods and classes perform as expected in isolation, without external dependencies.
-Implementation
+
 FileUploadServiceAPI:
 Tests have been written to verify the correct handling and conversion of XML files to JSON format.
 Error handling tests check that invalid or malformed XML files are handled gracefully with appropriate error messages.
+
 ProcessedFilesServiceAPI:
 Tests validate the CRUD operations (Create, Read, Update, Delete) on the processed JSON files within the database.
 Tests ensure that data is correctly stored, retrieved, updated, and deleted according to the API specifications.
