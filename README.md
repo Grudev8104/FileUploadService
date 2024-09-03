@@ -1,16 +1,22 @@
 XML to JSON Processing System
+
 Overview
+
 This system is designed to allow clients to upload XML files, which are then processed in the backend, converted to JSON, and stored in a remote microservice. The system is built using two separate microservices: FileUploadServiceAPI and ProcessedFilesServiceAPI.
 Components:
+
 •	FileUploadServiceAPI: Responsible for uploading and converting XML files.
 •	ProcessedFilesServiceAPI: Responsible for storing and managing the processed JSON files.
 •	SharedLibrary: A library containing the shared model ProcessedFile.
 
 Requirements
+
 System Requirements:
+
 •	.NET 7.0 SDK
 •	SQL Server (or compatible database)
 •	Visual Studio 2022 (or any IDE supporting .NET)
+
 Required Packages:
 •	Microsoft.EntityFrameworkCore
 •	Microsoft.EntityFrameworkCore.SqlServer
@@ -31,14 +37,19 @@ Update the appsettings.json in both FileUploadServiceAPI and ProcessedFilesServi
 In each project, run the following commands to create the database:
 dotnet run --project FileUploadServiceAPI
 dotnet run --project ProcessedFilesServiceAPI
-4. Running the Microservices
+
+5. Running the Microservices
 You can start each microservice using Visual Studio or by running:
 dotnet run --project FileUploadServiceAPI
 dotnet run --project ProcessedFilesServiceAPI
-5. Swagger
+6. Swagger
+   
 Each microservice has integrated Swagger UI, accessible at:
 •	FileUploadServiceAPI: https://localhost:{PORT}/swagger
 •	ProcessedFilesServiceAPI: https://localhost:{PORT}/swagger
+
+
+
 API Endpoints
 FileUploadServiceAPI
 1. Upload XML File
